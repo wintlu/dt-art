@@ -93,7 +93,7 @@ main {
 .main__wrapper {
 	margin: 0 auto;
 	max-width: 1260px;
-	padding: 60px 0;
+	padding: 20px 0 60px 0;
 	width: 100%;
 }
 
@@ -124,13 +124,25 @@ main {
 	font-style: normal;
 }
 
+#banner {
+	height: 160px;
+	margin: 0 auto;
+	background-image: url(http://static-dc.autodesk.net/content/dam/autodesk/www/solutions/autocad-search-landing-pages/misc/3d-design-search-landing-banner-1240x160.jpg);
+	background-position: 0 0;
+	background-repeat: no-repeat;
+}
+
+.group-title{
+	text-align: center;
+}
+
 /*---------------------------------
 2.1 Logo
 ----------------------------------*/
 .logo {
-	background: #fff;
+	background: #000;
 	color: #000;
-	height: 64px;
+	height: 66px;
 	text-align: center;
 }
 .logo__image {
