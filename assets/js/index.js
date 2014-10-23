@@ -94,5 +94,12 @@
             main_menu.addClass("menu--open");
           }
         });
+
+        main_menu.find('a[href="'+window.location.pathname+'"]').addClass('menu__item--active');
+
+        // $('.banner_background').hover(
+        //    function(){ $(this).removeClass('translucent') },
+        //    function(){ $(this).addClass('translucent') }
+        // );
     });
 }(jQuery));

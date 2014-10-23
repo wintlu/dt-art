@@ -1,48 +1,133 @@
 {{!< default}}
-
 {{! The main content area on the homepage }}
 <main role="main" class="{{#if @blog.cover}} custom-bg{{else}} default-bg{{/if}}"{{#if @blog.cover}} style="background-image: url({{@blog.cover}})"{{/if}}>
-    <div class="main__wrapper">
+<div class="main__wrapper">
     {{> menu}}
-
- <div id="banner"> 
-    三维动画
-    游戏美术
-    建筑表现
-    虚拟现实
-    多媒体展陈
- </div>
-
- <h5 class="group-title">案例展示</h5>
-        {{#foreach posts}}
-            {{#if tags}}
-                {{!-- tags are treated as Cases --}}
-                <article class="{{post_class}} post__wrapper" data-cols="4">
-                    <div class="post__wrapper_helper post__wrapper_helper--notloaded el__transition">
-                        {{content words="0"}}
-                        <div class="post__preview el__transition">    
-                            <header class="post__header">
-                                <h2 class="post__title">
-                                    <a href="{{url}}" class="post__link post__title_link"><span>{{{title}}}</span></a>
-                                </h2>
-                            </header>
-                            
-                            <p class="post__excerpt"><a href="{{url}}" class="post__link post__readmore">{{excerpt characters="120"}}&hellip;</a></p>
+    <div id="banner__wrapper" class="clearfix">
+        {{!--     <div class="banner" >三维动画</div>
+        <div class="banner" >游戏美术</div>
+        <div class="banner" >建筑表现</div>
+        <div class="banner" >虚拟现实</div>
+        <div class="banner" >多媒体展陈</div>
+        <div class="banner" >宣传片拍摄</div>
+        <div class="banner" >联系我们</div>
+        --}}
+        <div class="banner_item">
+            <div class="hexagon">
+                <a href="/business/#3d">
+                    <div class="hexagon-in1">
+                        <div class="hexagon-in2" style="background-image: url('http://ineng.net/tv/tvImg/pro3.jpg');">
+                            <div class="banner_title banner1">
+                            </div>
+                            <h3>三维动画</h3>
                         </div>
-                    
-                        {{!-- 
-                        <footer class="post__meta">
-                            {{#if tags}}
-                            <ul class="post__tags">
-                                {{#foreach tags}}
-                                <li class="post__tag"><a href="{{url}}" class="post__link post__tag_link">{{name}}</a>{{#if @last}} {{else}}, {{/if}}</li>
-                                {{/foreach}}
-                            </ul>
-                            {{/if}}
-                        </footer> --}}
                     </div>
-                </article>
-            {{/if}}
-        {{/foreach}}
+                </a>
+            </div>
+        </div>
+        <div class="banner_item">
+            <div class="hexagon">
+                <a href="/business/#construction">
+                <div class="hexagon-in1">
+                    <div class="hexagon-in2" style="background-image: url(http://www.szzppx.com/uploadfile/2010/1231/20101231044641816.jpg);">
+                        <div class="banner_title banner2"></div>
+                        <h3>建筑表现</h3>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+        <div class="banner_item">
+            <div class="hexagon">
+                <a href="/business/#virtual">
+                <div class="hexagon-in1">
+                    <div class="hexagon-in2" style="background-image: url(http://www.lon3d.com/vr168/UploadFiles_8954/201003/2010031212430000.jpg);">
+                        <div class="banner_title banner3"></div>
+                        <h3>虚拟现实</h3>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+        <div class="banner_item banner-contact">
+            <div class="hexagon">
+                <div class="hexagon-in1">
+                    <div class="hexagon-in2 contact-us">
+                        <div class="banner_title banner-contact">
+                            <h4>联系我们</h4>
+                            <p><a title="点击发送邮件" href="mailto:dt-art@qq.com" target="_top">邮件 dt-art@qq.com</a><br/>
+                            <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=249423831&site=qq&menu=yes" title="点击启动聊天">QQ 1811772034</a><br/>
+                            电话 18729393372<br/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner_item banner-newline banner-2ndline">
+            <div class="hexagon">
+                <a href="/business/#multi-media">
+                <div class="hexagon-in1">
+                    <div class="hexagon-in2" style="background-image: url(http://images.17173.com/2014/news/2014/04/09/hxz0409xnxs02.jpg);">
+                        <div class="banner_title banner4"></div>
+                        <h3>多媒体展陈</h3>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+        <div class="banner_item banner-2ndline">
+            <div class="hexagon">
+                <a href="/business/#video">
+                <div class="hexagon-in1">
+                    <div class="hexagon-in2" style="background-image: url(http://img2.cn.china.cn/2/3_399_7113_731_619.jpg);">
+                        <div class="banner_title banner5"></div>
+                        <h3>宣传片拍摄</h3>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+        <div class="banner_item banner-2ndline">
+            <div class="hexagon">
+                <a href="/business/#game">
+                <div class="hexagon-in1">
+                    <div class="hexagon-in2" style="background-image:url(http://www.yitu.cn/uploadfile/product/306/2014/08/04/1407119079.jpg)">
+                        <div class="banner_title banner6"></div>
+                        <h3>游戏美术</h3>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
     </div>
+    <h5 class="group-title">案例展示</h5>
+    {{#foreach posts}}
+    {{#if tags}}
+    {{!-- tags are treated as Cases --}}
+    <article class="{{post_class}} post__wrapper" data-cols="4">
+        <div class="post__wrapper_helper post__wrapper_helper--notloaded el__transition">
+            {{content words="0"}}
+            <div class="post__preview el__transition">
+                <header class="post__header">
+                    <h2 class="post__title">
+                    <a href="{{url}}" class="post__link post__title_link"><span>{{{title}}}</span></a>
+                    </h2>
+                </header>
+                <p class="post__excerpt"><a href="{{url}}" class="post__link post__readmore">{{excerpt characters="120"}}&hellip;</a></p>
+            </div>
+            {{!--
+            <footer class="post__meta">
+                {{#if tags}}
+                <ul class="post__tags">
+                    {{#foreach tags}}
+                    <li class="post__tag"><a href="{{url}}" class="post__link post__tag_link">{{name}}</a>{{#if @last}} {{else}}, {{/if}}</li>
+                    {{/foreach}}
+                </ul>
+                {{/if}}
+            </footer> --}}
+        </div>
+    </article>
+    {{/if}}
+    {{/foreach}}
+</div>
 </main>
