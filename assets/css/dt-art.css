@@ -1,3 +1,4 @@
+
 .color-pallete{
 	color: #5856d6;
 	color: #007aff;
@@ -37,6 +38,10 @@ Common styles
 	opacity: 0.5;
 }
 
+a:hover{
+	text-decoration: none;
+}
+
 /*---------------------------------
 My styles
 ----------------------------------*/
@@ -58,6 +63,7 @@ My styles
 }
 
 .group-title{
+	margin: 50px 0 20px 0;
 	text-align: center;
 }
 
@@ -74,9 +80,9 @@ My styles
 .banner_item h3{
 	color: #ddd;
 	position: absolute;
-	top: 40%;
-	left: 50%;
-	margin-left: -50px;
+	top: 170px;
+	text-align: center;
+	width: 100%;
 
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
@@ -87,8 +93,8 @@ My styles
 
 .contact-us h4{
 	color: #eee;
-	margin-top: 140px;
-	margin-bottom: 0;
+	margin-top: 155px;
+	margin-bottom: 15px;
 }
 
 .hexagon {
@@ -122,12 +128,12 @@ My styles
 	overflow: hidden;
 	width: 100%;
 	height: 100%;
-	background-repeat: no-repeat;
+	/*background-repeat: no-repeat;
 	background-position: 50%;
 
 	-webkit-background-size: 125%;
 	-moz-background-size: 125%;
-	background-size: 125%;
+	background-size: 125%;*/
 	visibility: visible;
 
 	-webkit-transform: rotate(-60deg);
@@ -177,16 +183,15 @@ My styles
 	background-color: #222;
 	cursor: default;
 }
-.banner-contact a, .banner-contact p{
+/*.banner-contact a, .banner-contact p{
 	color: #ccc;
-}
-.banner-contact a:hover{
-	color: #fff;
-}
-
+}*/
 .hexagon-in2:hover h3{
-	top: 39%;
+	top: 165px;
 	color: #fff;
+}
+.hexagon-in2:hover{
+	background-color: #22f;
 }
 
 .banner-newline{
