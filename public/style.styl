@@ -1,0 +1,112 @@
+@media (min-width: 1200px)
+  .container
+    max-width: 970px
+$brand-color = #ca4773
+$bk-color = #323232
+$font-color-white = #eeeeee
+$font-color-dark = #333333
+$gray = #eee
+body
+  background: #fff
+.top-banner
+  background: $bk-color
+  height: 30px
+  line-height: 30px
+  color: #ddd
+.stripe
+  height: 5px
+  background: $brand-color
+  background: linear-gradient(135deg, $brand-color, #F7B7AA)
+.header
+  padding-top: 20px
+  .title
+    color: $brand-color
+    letter-spacing: 5px
+    font-weight: bold
+.menu-nav
+  list-style-type: none
+  margin-bottom: 0
+  padding-left: 0
+  &:after
+    content: " "
+    display: table
+    clear: both
+  a
+    text-decoration: none
+    margin: 0
+    padding: 0
+    display: block
+    padding: 10px 20px
+    text-align: center
+  li
+    position: relative
+    float: left
+    width: 100px
+    a
+      color: $font-color-dark
+    >ul
+      padding: 0
+      list-style-type: none
+      position: absolute
+      left: 0
+      top: 100%
+      display: none
+      >li
+        width: 100%
+        transition: all 0.3s
+        background-color: #fff
+        a
+          color: $font-color-dark
+          text-align: center
+    &:hover, &.active
+      background-color: $brand-color
+      >a
+        color: $font-color-white
+    &:hover
+      >ul
+        display: block
+        >li
+          display: block
+
+.menu-nav-2
+  list-style-type: none
+  padding-left: 0
+  margin-bottom: 0
+  &:after
+    content: " "
+    display: table
+    clear: both
+  li
+    padding: 4px 10px
+    cursor: pointer
+    float: left
+    color: $font-color-dark
+    background-color: $gray
+    &:hover, &.active
+      background-color: $brand-color
+      color: $font-color-white
+      background-color: #ca4773
+    + li
+      margin-left: 5px
+
+.biz
+  img
+    display: inline
+.customers
+  img
+    display: inline
+hr.thin
+  margin-top: 3px
+  margin-bottom: 10px
+.slider
+  height: 300px
+  background-image: url("http://cdn.wonderfulengineering.com/wp-content/uploads/2014/05/city-wallpaper-7.jpg")
+  background-position: center
+footer
+  &, a, a:hover,a:visited
+    color: #bbb
+    text-decoration: none
+  a:hover
+    color: #eee
+  background-color: $bk-color
+  padding-top: 20px
