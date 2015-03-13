@@ -6,7 +6,6 @@
   <meta name="description" content="">
   <title>大唐艺方</title>
   <meta name="viewport" content="width=device-width">
-  <link rel="stylesheet" href="bootstrap-paper.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -35,9 +34,9 @@
           <h5 class="text-right title">数字动画表现专家</h5>
           <div class="hidden-xs hidden-sm">
             <ul class="menu-nav pull-right clearfix">
-              <li class="active"><a href="/index.html">HOME</a>
+              <li class="<%- current.source == 'index' ? 'active' : '' %>"><a href="/index.html">HOME</a>
               </li>
-              <li><a href="/works.html">WORKS</a>
+              <li class="<%- current.source == 'works' ? 'active' : '' %>"><a href="/works.html">WORKS</a>
                 <ul>
                   <li><a href="#">三维动画</a>
                   </li>
@@ -45,7 +44,7 @@
                   </li>
                 </ul>
               </li>
-              <li><a href="/services.html">SERVICES</a>
+              <li class="<%- current.source == 'services' ? 'active' : '' %>"><a href="/services.html">SERVICES</a>
                 <ul>
                   <li><a href="#">服务范围</a>
                   </li>
@@ -55,7 +54,7 @@
                   </li>
                 </ul>
               </li>
-              <li><a href="/about.html">ABOUT</a>
+              <li class="<%- current.source == 'about' ? 'active' : '' %>"><a href="/about.html">ABOUT</a>
                 <ul>
                   <li><a href="#">公司简介</a>
                   </li>
@@ -65,7 +64,7 @@
                   </li>
                 </ul>
               </li>
-              <li><a href="/contact.html">CONTACT</a>
+              <li class="<%- current.source == 'contact' ? 'active' : '' %>"><a href="/contact.html">CONTACT</a>
                 <ul>
                   <li><a href="#">详细地址</a>
                   </li>

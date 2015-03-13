@@ -1,3 +1,5 @@
+@import 'bootstrap-paper.css'
+
 @media (min-width: 1200px)
   .container
     max-width: 970px
@@ -51,6 +53,7 @@ body
       left: 0
       top: 100%
       display: none
+      z-index: 10
       >li
         width: 100%
         transition: background-color 0.3s
@@ -117,11 +120,18 @@ footer
   padding-top: 20px
   
 //content page
-.content
-  .banner
+.banner
     height: 150px
-    // border: 1px solid red
-  .green
-    background-color: #53e0b3
-  .content-body
-    min-height: 200px
+    &.green
+      background-color: #53e0b3
+.content-wrap
+  margin-bottom: 30px
+  .panel
+    position: relative
+    margin-top: -45px
+    .panel-title
+      font-size: 20px
+  .content-item
+    margin-bottom: 15px
+    
+   
