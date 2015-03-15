@@ -25,15 +25,19 @@
     <div class="header">
         <div class="container">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-md-4 col-xs-8">
                     <a href="/index.html" title="Home">
-                        <img src="http://dt-art.qiniudn.com/assets/LOGO.png" alt="DT-ART" />
+                        <img class="img-responsive" src="http://dt-art.qiniudn.com/assets/LOGO.png" alt="DT-ART" />
                     </a>
-                    <button class="visible-xs visible-sm">
-                        - - -
+                </div>
+                <div class="col-md-8 col-xs-4 clearfix">
+                    <button class="modal-nav-toggle pull-right visible-xs visible-sm">
+                        <span></span>
+                        <span></span>
+                        <span></span>
                     </button>
                 </div>
-                <div class="col-sm-8">
+                <div class="col-md-8 col-xs-12">
                     <h5 class="text-right title">数字动画表现专家</h5>
                     <div class="hidden-xs hidden-sm">
                         <ul class="menu-nav pull-right clearfix">
@@ -113,6 +117,21 @@
                 </div>
             </div>
         </footer>
+        <div class="modal-nav-wrap">
+            <ul class="modal-nav">
+                <li>
+                    <a class="clearfix" href="#"> <span class="close">X</span>
+                    </a>
+                </li>
+                <li><a href="index.html" title="">HOME</a> </li>
+                <li><a href="works.html" title="">WORKS</a>
+                </li>
+                <li><a href="services.html" title="">SERVICES</a>
+                </li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+        </div>
 
         <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -121,6 +140,8 @@
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
+    <script src="jquery.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
