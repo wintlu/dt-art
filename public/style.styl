@@ -1,5 +1,6 @@
 @import 'bootstrap-paper.css'
 @import 'animate'
+@import 'content'
 
 @media (min-width: 1200px)
   .container
@@ -13,11 +14,9 @@ $gray = #eee
 
 //global styles
 a
-  text-decoration: none
   color: $font-color-white
-  &:hover, &:visited
+  &, &:hover, &:visited, &:focus
     text-decoration: none
-
 body
   background: #fff
 .top-banner
@@ -72,9 +71,10 @@ body
           color: $font-color-dark
           text-align: center
     &:hover 
+      > a
+        @extend .animated
       > ul
         display: block
-      > ul
         @extend .animated
         @extend .flipInX
     &:hover, &.active
@@ -118,8 +118,6 @@ body
     text-align: center
     a
       display: block
-.modal-nav-mode
-  
 
 .menu-nav-2
   list-style-type: none
@@ -149,7 +147,18 @@ body
 
 //components
 .tab-pane
-  transition: all 0.5s
+  .tab-pane-item
+    background-size: cover
+    background-position: center center
+    margin-bottom: 30px
+    &.item-lg
+      height: 230px
+    &.item-sm
+      height: 100px
+  &.active .tab-pane-item
+    @extend .animated
+    @extend .puffIn
+    
 .biz
   .row
     .col-sm-3
