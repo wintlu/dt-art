@@ -71,18 +71,16 @@ body
         a
           color: $font-color-dark
           text-align: center
-    // &:hover
-    //   @extend .animated
-    //   @extend .flipInX
+    &:hover 
+      > ul
+        display: block
+      > ul
+        @extend .animated
+        @extend .flipInX
     &:hover, &.active
-      background-color: $brand-color
       >a
         color: $font-color-white
-    &:hover
-      >ul
-        display: block
-        >li
-          display: block
+        background-color: $brand-color
 .modal-nav-toggle
   border: none
   background: transparent
