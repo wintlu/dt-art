@@ -56,17 +56,22 @@ body
     margin: 0
     padding: 0
     display: block
-    padding: 10px 20px
+    padding: auto 20px
     text-align: center
-  li
+    height: 43px
+    line-height: 43px
+    color: $font-color-dark
+  .flip-box
+    .bottom
+      color: $font-color-white
+      background-color: $brand-color
+  >li
     position: relative
     float: left
     width: 100px
-    a
-      color: $font-color-dark
     >ul
+      width: 100%
       padding: 0
-      list-style-type: none
       position: absolute
       left: 0
       top: 100%
@@ -79,17 +84,19 @@ body
         a
           color: $font-color-dark
           text-align: center
-    &:hover 
-      > a
-        @extend .animated
+        &:hover a //secondary menu hover effect
+          background-color: $brand-color
+          color: $font-color-white
+    &:hover //top menu item hover effect
+      .flip-box
+        @extend .flipUp
       > ul
         display: block
-        @extend .animated
-        @extend .flipInX
-    &:hover, &.active
-      >a
-        color: $font-color-white
-        background-color: $brand-color
+        @extend .animated, .flipInX
+    &.active
+      .flip-box
+        @extend .flipUp
+
 .modal-nav-toggle
   border: none
   background: transparent
@@ -140,9 +147,6 @@ body
     cursor: pointer
     float: left
     background-color: $gray
-    // &:hover
-    //   @extend .animated
-    //   @extend .flipInX
     a
       padding: 4px 10px
       color: $font-color-dark
