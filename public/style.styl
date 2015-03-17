@@ -87,15 +87,16 @@ body
         &:hover a //secondary menu hover effect
           background-color: $brand-color
           color: $font-color-white
-    &:hover //top menu item hover effect
-      .flip-box
-        @extend .flipUp
+    &:hover   //top menu item hover effect: show submenu
       > ul
         display: block
         @extend .animated, .flipInX
-    &.active
+    &.active, &:hover  //top menu hover and active effect: hight anchor
       .flip-box
         @extend .flipUp
+        html[class^="ie"] &  //add hightlight for ie
+          background-color: $brand-color
+          color: $font-color-white
 
 .modal-nav-toggle
   border: none
