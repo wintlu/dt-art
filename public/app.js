@@ -4,6 +4,13 @@ $(document).ready(function(argument) {
         activeElement.addClass('active');
     }
 
+    function hashChanged() {
+        if (window.location.hash) {
+            var hashID = window.location.hash.substr(1);
+            $('.menu-nav-2 a[href="#' + hashID + '"]').click();
+        }
+    }
+
     $('.modal-nav-toggle').click(function() {
         $('.modal-nav-wrap').addClass('active');
     });
@@ -19,4 +26,7 @@ $(document).ready(function(argument) {
         selectActive(content);
         event.preventDefault();
     });
+
+    $(window).on('hashchange', hashChanged);
+    hashChanged();
 });
