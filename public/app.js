@@ -5,10 +5,10 @@ $(document).ready(function(argument) {
     }
 
     $('.modal-nav-toggle').click(function() {
-        $('.modal-nav-wrap').show();
+        $('.modal-nav-wrap').addClass('active');
     });
     $('.modal-nav-wrap .close-button').click(function() {
-        $('.modal-nav-wrap').hide();
+        $('.modal-nav-wrap').removeClass('active');
     });
 
     $('.menu-nav-2 a').click(function(event) {
