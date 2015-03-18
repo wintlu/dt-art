@@ -5,6 +5,9 @@ $(document).ready(function(argument) {
     }
 
     function showMedia(mediaUrl) {
+        if (mediaUrl) {
+            $('#video-modal').find('iframe').prop('src', mediaUrl);
+        }
         $('#video-modal').modal({});
     }
 
