@@ -4,6 +4,10 @@ $(document).ready(function(argument) {
         activeElement.addClass('active');
     }
 
+    function showMedia(mediaUrl) {
+        $('#video-modal').modal({})
+    }
+
     $('.modal-nav-toggle').click(function() {
         $('.modal-nav-wrap').show();
     });
@@ -19,4 +23,10 @@ $(document).ready(function(argument) {
         selectActive(content);
         event.preventDefault();
     });
+
+    $('[data-media]').click(function(event) {
+        var mediaUrl = $(event.target).data('media');
+        showMedia(mediaUrl);
+    })
+
 });
