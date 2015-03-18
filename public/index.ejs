@@ -1,4 +1,20 @@
-<div class="slider">
+<div id="slider_container">
+    <!-- Slides Container -->
+    <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+        Loading...
+    </div>
+    <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 1300px; height: 300px;">
+        <div><img u="image" src="http://www.jssor.com/img/1920/purple.jpg" />
+        </div>
+        <div><img u="image" src="http://cdn.wonderfulengineering.com/wp-content/uploads/2014/05/city-wallpaper-7.jpg" />
+        </div>
+    </div>
+    <!-- Arrow Left -->
+    <span u="arrowleft" class="jssora21l" style="width: 55px; height: 55px; top: 123px; left: 8px;">
+        </span>
+    <!-- Arrow Right -->
+    <span u="arrowright" class="jssora21r" style="width: 55px; height: 55px; top: 123px; right: 8px">
+        </span>
 </div>
 <div class="container">
     <div class="intro">
@@ -69,7 +85,6 @@
             <div role="tabpanel" class="tab-pane" id="works-video">Video</div>
             <div role="tabpanel" class="tab-pane" id="works-drawing">drawing</div>
             <div role="tabpanel" class="tab-pane" id="works-others">others</div>
-
         </div>
     </div>
     <hr class="invisible" />
@@ -83,12 +98,14 @@
         <hr class="thin" />
         <div class="row text-center">
             <div class="col-sm-3 col-xs-6">
-                <a href="/works.html" title=""><img class="img-responsive" src="http://dt-art.qiniudn.com/assets/biz-animation.png" alt="Animation"></a>
+                <a href="/works.html" title=""><img class="img-responsive" src="http://dt-art.qiniudn.com/assets/biz-animation.png" alt="Animation">
+                </a>
                 <h4>三维动画</h4>
                 <p class="text-muted">3D Animation</p>
             </div>
             <div class="col-sm-3 col-xs-6">
-                <a href="#" title=""><img class="img-responsive" src="http://dt-art.qiniudn.com/assets/biz-media.png" alt="Animation"></a>
+                <a href="#" title=""><img class="img-responsive" src="http://dt-art.qiniudn.com/assets/biz-media.png" alt="Animation">
+                </a>
                 <h4>多媒体</h4>
                 <p class="text-muted">Multimedia</p>
             </div>
@@ -136,3 +153,5 @@
     </div>
     <hr class="invisible" />
 </div>
+
+<script src="jssor.slider.mini.js"></script>

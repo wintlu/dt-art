@@ -43,6 +43,8 @@ body
     color: $brand-color
     letter-spacing: 5px
     font-weight: bold
+.intro
+  padding-top: 15px
 .menu-nav
   list-style-type: none
   margin-bottom: 0
@@ -112,22 +114,25 @@ body
       margin-top: 0
   
 .modal-nav-wrap
-  display: none
   position: fixed
   background-color: #fff
   top: 0
-  left: 0
   right: 0
-  bottom: 0
+  height: 0
+  width: 0
   z-index: 100
   overflow-x: hidden
   overflow-y: auto
+  opacity: 0
+  &.active
+    opacity: 1
+    height: 100%
+    width: 100%
   .close-button
     font-size: 50px
     margin-right: 15px
     cursor: pointer
     float: right
-    
   .modal-nav
     width: 100%
     font-size: 40px 
@@ -189,10 +194,35 @@ body
 hr.thin
   margin-top: 3px
   margin-bottom: 10px
-.slider
+#slider_container
   height: 300px
-  background-image: url("http://cdn.wonderfulengineering.com/wp-content/uploads/2014/05/city-wallpaper-7.jpg")
-  background-position: center
+  width: 1300px
+  position: relative
+  top: 0px 
+  left: 0px
+  .jssora21l,
+  .jssora21r,
+  .jssora21ldn,
+  .jssora21rdn 
+    position: absolute;
+    background: red
+    cursor: pointer;
+    display: block;
+    background: url('../img/slider-arrow.png') center center no-repeat;
+    overflow: hidden;
+  .jssora21l
+    background-position: -3px -33px;
+  .jssora21r
+    background-position: -63px -33px;
+  .jssora21l:hover
+    background-position: -123px -33px;
+  .jssora21r:hover
+    background-position: -183px -33px;
+  .jssora21ldn
+    background-position: -243px -33px;
+  .jssora21rdn
+    background-position: -303px -33px;
+
 footer
   &, a, a:hover,a:visited
     color: #bbb
