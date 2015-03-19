@@ -9,6 +9,14 @@ body{
 @media (min-width: 1200px)
   .container
     max-width: 970px
+    
+.row.no-gutters
+  margin-left: 0
+  margin-right: 0
+  > [class^="col-"], > [class*=" col-"]
+    padding-left: 0
+    padding-right: 0
+
 $brand-color = #ca4773
 $bk-color = #323232
 $font-color-white = #eeeeee
@@ -168,11 +176,10 @@ body
   .tab-pane-item
     background-size: cover
     background-position: center center
-    margin-bottom: 30px
     &.item-lg
-      height: 230px
+      height: 240px
     &.item-sm
-      height: 100px
+      height: 120px
   &.active .tab-pane-item
     @extend .animated
     @extend .puffIn
