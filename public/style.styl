@@ -170,16 +170,30 @@ body
       @extend .animated
       @extend .flipInY
     + li
-      margin-left: 5px
+      margin-left: 2px
 
 .tab-pane
   .tab-pane-item
-    background-size: cover
-    background-position: center center
-    &.item-lg
-      height: 240px
-    &.item-sm
-      height: 120px
+    &.work-lg
+      height: 360px
+    &.work-sm
+      height: 165px
+    &.work-lg, &.work-sm
+      background-size: 100%      
+      // background-size: cover
+      background-position-x: 50%
+      background-position-y: 50%
+      transition: all 0.3s  
+      margin-bottom: 30px
+      .work-title
+        font-size: 20px
+        text-align: center
+      .work-detail
+        font-size: 15px
+        text-align: center
+      &:hover
+        background-size: 110%
+      
   &.active .tab-pane-item
     @extend .animated
     @extend .puffIn
