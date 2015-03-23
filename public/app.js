@@ -18,6 +18,9 @@ $(document).ready(function(argument) {
             selectActive(anchor.parent());
             var content = $('[name=' + hashID + ']');
             selectActive(content);
+        } else {
+            var activeAnchor = $('.menu-nav-2 li.active a');
+            window.location.hash = activeAnchor.attr('href');
         }
     }
 
