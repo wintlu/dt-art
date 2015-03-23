@@ -14,7 +14,10 @@ $(document).ready(function(argument) {
     function hashChanged() {
         if (window.location.hash) {
             var hashID = window.location.hash.substr(1);
-            $('.menu-nav-2 a[href="#' + hashID + '"]').click();
+            var anchor = $('.menu-nav-2 a[href="#' + hashID + '"]');
+            selectActive(anchor.parent());
+            var content = $('[name=' + hashID + ']');
+            selectActive(content);
         }
     }
 
@@ -51,15 +54,6 @@ $(document).ready(function(argument) {
     });
     $('.modal-nav-wrap .close-button').click(function() {
         $('.modal-nav-wrap').removeClass('active');
-    });
-
-    $('.menu-nav-2 a').click(function(event) {
-        var nav = $(event.target);
-        selectActive(nav.parent());
-        var hash = event.target.hash;
-        var content = $(hash);
-        selectActive(content);
-        event.preventDefault();
     });
 
     $('[data-media]').click(function(event) {
