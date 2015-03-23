@@ -4,6 +4,13 @@ $(document).ready(function(argument) {
         activeElement.addClass('active');
     }
 
+    function showMedia(mediaUrl) {
+        if (mediaUrl) {
+            $('#video-modal').find('iframe').prop('src', mediaUrl);
+        }
+        $('#video-modal').modal({});
+    }
+
     function hashChanged() {
         if (window.location.hash) {
             var hashID = window.location.hash.substr(1);
@@ -54,6 +61,11 @@ $(document).ready(function(argument) {
         selectActive(content);
         event.preventDefault();
     });
+
+    $('[data-media]').click(function(event) {
+        var mediaUrl = $(event.target).data('media');
+        showMedia(mediaUrl);
+    })
 
     $(window).on('hashchange', hashChanged);
     hashChanged();

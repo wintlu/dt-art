@@ -9,6 +9,14 @@ body{
 @media (min-width: 1200px)
   .container
     max-width: 970px
+    
+.row.no-gutters
+  margin-left: 0
+  margin-right: 0
+  > [class^="col-"], > [class*=" col-"]
+    padding-left: 0
+    padding-right: 0
+
 $brand-color = #ca4773
 $bk-color = #323232
 $font-color-white = #eeeeee
@@ -140,7 +148,7 @@ body
     a
       display: block
       color: $brand-color
-
+  
 .menu-nav-2
   list-style-type: none
   padding-left: 0
@@ -162,21 +170,35 @@ body
       @extend .animated
       @extend .flipInY
     + li
-      margin-left: 5px
+      margin-left: 2px
 
-.tab-pane
-  .tab-pane-item
-    background-size: cover
-    background-position: center center
-    margin-bottom: 30px
-    &.item-lg
-      height: 230px
-    &.item-sm
-      height: 100px
+&.work-lg
+  height: 360px
+&.work-sm
+  height: 165px
+&.work-lg, &.work-sm
+  background-size: 100%      
+  // background-size: cover
+  background-position-x: 50%
+  background-position-y: 50%
+  transition: all 0.3s  
+  margin-bottom: 30px
+  .work-title
+    font-size: 20px
+    text-align: center
+  .work-detail
+    font-size: 15px
+    text-align: center
+  &:hover
+    background-size: 110%
+      
   &.active .tab-pane-item
     @extend .animated
     @extend .puffIn
     
+[data-media]
+  cursor: pointer
+  
 .biz
   .row
     .col-sm-3
