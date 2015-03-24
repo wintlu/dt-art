@@ -172,16 +172,16 @@ body
     + li
       margin-left: 2px
 
-&.work-lg
+&.img-lg
   height: 360px
-&.work-sm
+&.img-sm
   height: 165px
-&.work-lg, &.work-sm
-  background-size: 100%      
-  // background-size: cover
+&.img-lg, &.img-sm
+  background-size: 100%
   background-position-x: 50%
   background-position-y: 50%
-  transition: all 0.3s  
+  // background-size: cover
+  transition: all 0.3s
   margin-bottom: 30px
   .work-title
     font-size: 20px
@@ -190,7 +190,7 @@ body
     font-size: 15px
     text-align: center
   &:hover
-    background-size: 110%
+    transform: scale(1.05)
       
   &.active .tab-pane-item
     @extend .animated
