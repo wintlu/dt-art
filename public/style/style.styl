@@ -40,10 +40,17 @@ body
   height: 30px
   line-height: 30px
   color: #ddd
+  .contact-link
+    margin-left: 5px
+    color: lighten($brand-color,50%)
+    &:hover
+      color: lighten($brand-color, 80%)
 .stripe
   height: 5px
   background: $brand-color
-  background: linear-gradient(135deg, $brand-color, #F7B7AA)
+  background: linear-gradient(274deg, #CE3CF7, #FFF238)
+  background-size: 400% 400%
+  @extend .backgroundRotate
 .header
   padding-top: 20px
   .title
