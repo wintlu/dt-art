@@ -1,15 +1,49 @@
 $(document).ready(function(argument) {
+
+    var imageIndex = 0;
+    var imageCollection = [];
+
     function selectActive(activeElement) {
         activeElement.siblings().removeClass('active');
         activeElement.addClass('active');
     }
 
-    function showMedia(mediaUrl) {
+    function showVideo(mediaUrl) {
         if (mediaUrl) {
             $('#video-modal').find('iframe').prop('src', mediaUrl);
         }
         $('#video-modal').modal({});
     }
+
+    function showImage(){
+        var $imageModal = $('#image-modal');
+        var realIndex = imageIndex % imageCollection.length
+        var realImageWrap = imageCollection.get(realIndex);
+        if(realImageWrap){
+            var img = $(realImageWrap).find('img');
+            $imageModal.find('img').attr('src', img.attr('src'));
+        }
+    }
+
+    function showImageModal(index, collection) {
+        var $imageModal = $('#image-modal');
+        imageIndex = index;
+        imageCollection = collection;
+        $imageModal.modal({});
+        showImage();
+    }
+
+    function initImageModal() {
+        var $imageModal = $('#image-modal');
+        $imageModal.find('.left').click(function() {
+            imageIndex--;
+            showImage();
+        });
+        $imageModal.find('.right').click(function() {
+            imageIndex++;
+            showImage();
+        });
+    };
 
     function hashChanged() {
         if (window.location.hash) {
@@ -73,11 +107,18 @@ $(document).ready(function(argument) {
 
     $('[data-media]').click(function(event) {
         var mediaUrl = $(event.target).data('media');
-        showMedia(mediaUrl);
+        showVideo(mediaUrl);
+    })
+
+    $('[data-image]').click(function(event) {
+        var collection = $(this).parents('.tab-pane').find('[data-image]');
+        var index = collection.index(this);
+        showImageModal(index, collection);
     })
 
     $(window).on('hashchange', hashChanged);
     hashChanged();
     initSlider();
+    initImageModal();
     delayLoadImg(isLargeScreen());
 });

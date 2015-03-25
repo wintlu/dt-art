@@ -228,9 +228,52 @@ body
     @extend .animated
     @extend .puffIn
     
-[data-media]
+[data-media],[data-image]
   cursor: pointer
-  
+
+#image-modal
+  .modal-title
+    color: #fff
+  .modal-backdrop
+    opacity: 0.8
+  .modal-content
+    background-color: #000
+    .img-wrap
+      text-align: center
+      img
+        max-width: 100%
+        position: absolute
+        top: 0
+        left: 0
+        right: 0
+        bottom: 0
+        margin: auto
+    .modal-body
+      min-height: 300px
+      .left, .right
+        font-size: 30px
+        position: absolute
+        width: 40%
+        top: 0
+        bottom: 0
+        color: #fff
+        text-align: center
+          span
+            position: absolute
+            top: 40%
+            opacity: 0.5
+      .left
+        &:hover
+          cursor: pointer
+          span
+            opacity: 1
+      .right
+        right: 0
+        &:hover
+          cursor: pointer
+          span
+            opacity: 1
+    
 .biz
   .row
     .col-sm-3
