@@ -52,6 +52,18 @@ $(document).ready(function(argument) {
         }
     }
 
+    function delayLoadImg(isLargeScreen) {
+        $('img[data-delay-src]').each(function(index, img) {
+            var $img = $(img);
+            var realSrc = isLargeScreen ? $img.attr('data-delay-src') : $img.attr('data-delay-src') + '?small';
+            $img.attr('src', realSrc);
+        });
+    };
+
+    function isLargeScreen() {
+        return $('#media-indicator').css('display') === 'block';
+    }
+
     $('.modal-nav-toggle').click(function() {
         $('.modal-nav-wrap').addClass('active');
     });
@@ -67,4 +79,5 @@ $(document).ready(function(argument) {
     $(window).on('hashchange', hashChanged);
     hashChanged();
     initSlider();
+    delayLoadImg(isLargeScreen());
 });

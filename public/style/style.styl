@@ -128,7 +128,7 @@ body
   right: 0
   height: 0
   width: 0
-  z-index: 100
+  // z-index: 100
   overflow-x: hidden
   overflow-y: auto
   opacity: 0
@@ -172,25 +172,58 @@ body
     + li
       margin-left: 2px
 
-&.img-lg
+.img-lg
   height: 360px
-&.img-sm
+  line-height: 360px
+.img-sm
   height: 165px
-&.img-lg, &.img-sm
-  background-size: 100%
-  background-position-x: 50%
-  background-position-y: 50%
-  // background-size: cover
-  transition: all 0.3s
+  line-height: 165px
+.img-lg, .img-sm
+  background-color: #000
+  overflow: hidden
   margin-bottom: 30px
-  .work-title
-    font-size: 20px
-    text-align: center
-  .work-detail
+  text-align: center
+  position: relative
+  color: #fff
+  > img
+    max-width: 100%
+    height: auto
+    transition: all 0.3s
+  .img-title
+    font-size: 25px
+  .img-detail
     font-size: 15px
+  .img-title, .img-detail
     text-align: center
-  &:hover
-    transform: scale(1.05)
+    position: absolute
+    left: 0
+    top: 0
+    height: 100%
+    width: 100%
+    z-index: 2
+    opacity: 0
+    transition: margin-top 0.3s, opacity 0.3s
+  .backdrop
+    position: absolute
+    left: 0
+    top: 0
+    height: 100%
+    width: 100%
+    background: #000
+    opacity: 0
+    z-index: 1
+    transition: opacity 0.3s
+  &:hover 
+    img
+      transform: scale(1.1)
+    .backdrop
+      opacity: 0.5
+    .img-title
+      margin-top: -20px
+      opacity: 1
+    .img-detail
+      margin-top: 20px
+      opacity: 1
       
   &.active .tab-pane-item
     @extend .animated
