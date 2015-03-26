@@ -17,6 +17,13 @@ body{
     padding-left: 0
     padding-right: 0
 
+.hidden-ie7
+  html.ie7 &
+    display: none
+.hidden-ie8
+  html.ie8 &
+    display: none
+
 $brand-color = #ca4773
 $bk-color = #323232
 $font-color-white = #eeeeee
@@ -210,6 +217,8 @@ body
     z-index: 2
     opacity: 0
     transition: margin-top 0.3s, opacity 0.3s
+    @extend .hidden-ie7
+    @extend .hidden-ie8
   .backdrop
     position: absolute
     left: 0
@@ -220,6 +229,8 @@ body
     opacity: 0
     z-index: 1
     transition: opacity 0.3s
+    @extend .hidden-ie7
+    @extend .hidden-ie8
   &:hover 
     img
       transform: scale(1.1)
