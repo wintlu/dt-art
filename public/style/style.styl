@@ -1,5 +1,6 @@
 @import 'bootstrap-paper.css'
 @import 'animate'
+@import 'slick'
 
 body{
   font-family: Helvetica, Tahoma, Arial, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
@@ -230,11 +231,16 @@ body
     .img-detail
       margin-top: 20px
       opacity: 1
-      
   &.active .tab-pane-item
     @extend .animated
     @extend .puffIn
-    
+
+.img-crop-w
+  overflow: hidden
+  img
+    max-height: 100%
+    width: auto
+
 [data-media],[data-image]
   cursor: pointer
 
@@ -317,34 +323,23 @@ body
 hr.thin
   margin-top: 3px
   margin-bottom: 10px
-#slider_container
-  height: 300px
-  width: 1300px
-  position: relative
-  top: 0px 
-  left: 0px
-  .jssora21l,
-  .jssora21r,
-  .jssora21ldn,
-  .jssora21rdn 
-    position: absolute;
-    background: red
-    cursor: pointer;
-    display: block;
-    background: url('../img/slider-arrow.png') center center no-repeat;
-    overflow: hidden;
-  .jssora21l
-    background-position: -3px -33px;
-  .jssora21r
-    background-position: -63px -33px;
-  .jssora21l:hover
-    background-position: -123px -33px;
-  .jssora21r:hover
-    background-position: -183px -33px;
-  .jssora21ldn
-    background-position: -243px -33px;
-  .jssora21rdn
-    background-position: -303px -33px;
+
+.slick-slider
+  .prevArrow, .nextArrow
+    position: absolute
+    top: 40%
+    color: #eee
+    font-size: 100px
+    opacity: 0.5
+    height: 100px
+    width: 100px
+    cursor: pointer
+    &:hover
+      opacity: 1
+  .prevArrow
+    left: 5%
+  .nextArrow
+    right: 5%
 
 footer
   &, a, a:hover,a:visited

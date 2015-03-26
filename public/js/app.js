@@ -15,11 +15,11 @@ $(document).ready(function(argument) {
         $('#video-modal').modal({});
     }
 
-    function showImage(){
+    function showImage() {
         var $imageModal = $('#image-modal');
         var realIndex = imageIndex % imageCollection.length
         var realImageWrap = imageCollection.get(realIndex);
-        if(realImageWrap){
+        if (realImageWrap) {
             var img = $(realImageWrap).find('img');
             $imageModal.find('img').attr('src', img.attr('src'));
         }
@@ -58,44 +58,28 @@ $(document).ready(function(argument) {
         }
     }
 
-    function initSlider() {
-        if (window.$JssorSlider$) {
-            var options = {
-                $AutoPlay: true,
-                $FillMode: 2,
-                $ArrowNavigatorOptions: {
-                    $Class: $JssorArrowNavigator$,
-                    $ChanceToShow: 2,
-                    $AutoCenter: 2
-                }
-            };
-            var jssor_slider1 = new $JssorSlider$('slider_container', options);
-
-            function ScaleSlider() {
-                var bodyWidth = document.body.clientWidth;
-                if (bodyWidth)
-                    jssor_slider1.$ScaleWidth(Math.min(bodyWidth, 1920));
-                else
-                    window.setTimeout(ScaleSlider, 30);
-            }
-            ScaleSlider();
-
-            $(window).bind("load", ScaleSlider);
-            $(window).bind("resize", ScaleSlider);
-            $(window).bind("orientationchange", ScaleSlider);
-        }
-    }
-
     function delayLoadImg(isLargeScreen) {
         $('img[data-delay-src]').each(function(index, img) {
             var $img = $(img);
-            var realSrc = isLargeScreen ? $img.attr('data-delay-src') : $img.attr('data-delay-src') + '?small';
+            var realSrc = $img.attr('data-delay-src')
+            if (!isLargeScreen) {
+                var cropParam = $img.attr('data-crop');
+                realSrc = realSrc + '?' + cropParam;
+            }
             $img.attr('src', realSrc);
         });
     };
 
     function isLargeScreen() {
         return $('#media-indicator').css('display') === 'block';
+    }
+
+    function initSlicker(){
+        $('.slick-carousel').slick({
+            auto: true,
+            prevArrow: '<span class="prevArrow hidden-xs hidden-sm glyphicon glyphicon-chevron-left"></span>',
+            nextArrow: '<span class="nextArrow hidden-xs hidden-sm glyphicon glyphicon-chevron-right"></span>'
+        });
     }
 
     $('.modal-nav-toggle').click(function() {
@@ -118,7 +102,7 @@ $(document).ready(function(argument) {
 
     $(window).on('hashchange', hashChanged);
     hashChanged();
-    initSlider();
-    initImageModal();
     delayLoadImg(isLargeScreen());
+    initSlicker();
+    initImageModal();
 });
