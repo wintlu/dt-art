@@ -71,10 +71,14 @@ $(document).ready(function(argument) {
     };
 
     function isLargeScreen() {
+        var $html = $('html');
+        if ($html.hasClass('ie8')) {
+            return true;
+        }
         return $('#media-indicator').css('display') === 'block';
     }
 
-    function initSlicker(){
+    function initSlicker() {
         $('.slick-carousel').slick({
             auto: true,
             prevArrow: '<span class="prevArrow hidden-xs hidden-sm glyphicon glyphicon-chevron-left"></span>',
