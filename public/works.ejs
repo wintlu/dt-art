@@ -147,12 +147,12 @@
                 </div>
                 <div role="tabpanel" class="tab-pane" name="works-drawing">
                     <div class="row">
-                        <% var contents = public.img.works_drawing._contents;
+                        <% var contents = works_drawing;
                          for(var i in contents){ %>
                           <% var image = contents[i] %>
                             <div class="col-sm-3">
                             <div class="tab-pane-item img-sm" data-image>
-                                <img src="img/ajax-loader.gif" data-delay-src="img/works_drawing/<%= image %>">
+                                <img src="img/ajax-loader.gif" data-delay-src="<%= cdn_url + image %>">
                                 <div class="backdrop"></div>
                                 <div class="img-title">
                                     Item ###
