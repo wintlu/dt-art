@@ -1,3 +1,49 @@
+var ImageViewer = (function() {
+    var self;
+
+    function ImageViewer(container) {
+        this.$container = $(container);
+        this.$container.find('.left-button').click(this.goLeft);
+        this.$container.find('.right-button').click(this.goRight);
+        this.$container.find('.close-button').click(this.close);
+        this.index = 0;
+        this.coll = [];
+        self = this;
+    }
+
+    ImageViewer.prototype.showCurrent = function() {
+        var _index = self.index % self.coll.length;
+        var curImageUrl = this.coll[_index];
+        this.$container.find('img').attr('src', curImageUrl);
+    }
+
+    ImageViewer.prototype.close = function() {
+        self.$container.removeClass('active');
+        self.index = 0;
+        self.coll = [];
+    }
+
+    ImageViewer.prototype.goLeft = function() {
+        self.index--;
+        self.showCurrent();
+    }
+
+    ImageViewer.prototype.goRight = function() {
+        self.index++;
+        self.showCurrent();
+    }
+    11
+
+    ImageViewer.prototype.show = function(_index, _coll) {
+        this.index = _index;
+        this.coll = _coll;
+        this.showCurrent();
+        this.$container.addClass('active');
+    }
+
+    return ImageViewer;
+})();
+
 $(document).ready(function(argument) {
 
     var imageIndex = 0;
@@ -14,36 +60,6 @@ $(document).ready(function(argument) {
         }
         $('#video-modal').modal({});
     }
-
-    function showImage() {
-        var $imageModal = $('#image-modal');
-        var realIndex = imageIndex % imageCollection.length
-        var realImageWrap = imageCollection.get(realIndex);
-        if (realImageWrap) {
-            var img = $(realImageWrap).find('img');
-            $imageModal.find('img').attr('src', img.attr('src'));
-        }
-    }
-
-    function showImageModal(index, collection) {
-        var $imageModal = $('#image-modal');
-        imageIndex = index;
-        imageCollection = collection;
-        $imageModal.modal({});
-        showImage();
-    }
-
-    function initImageModal() {
-        var $imageModal = $('#image-modal');
-        $imageModal.find('.left').click(function() {
-            imageIndex--;
-            showImage();
-        });
-        $imageModal.find('.right').click(function() {
-            imageIndex++;
-            showImage();
-        });
-    };
 
     function hashChanged() {
         if (window.location.hash) {
@@ -98,10 +114,18 @@ $(document).ready(function(argument) {
         showVideo(mediaUrl);
     })
 
+    var imageViewer = new ImageViewer('#image-viewer');
+
     $('[data-image]').click(function(event) {
-        var collection = $(this).parents('.tab-pane').find('[data-image]');
-        var index = collection.index(this);
-        showImageModal(index, collection);
+        var imgs = $(this).parents('.tab-pane').find('[data-image] img');
+        var urls = $.map(imgs, function(img) {
+            return $(img).attr('src');
+        });
+        var curUrl = $(this).find('img').attr('src');
+        // var index = collection.index(this);
+        // showImageModal(index, collection);
+        var index = urls.indexOf(curUrl);
+        imageViewer.show(index, urls);
     })
 
     $(window).on('hashchange', hashChanged);
@@ -109,4 +133,5 @@ $(document).ready(function(argument) {
     delayLoadImg(isLargeScreen());
     initSlicker();
     initImageModal();
+
 });
