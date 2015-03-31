@@ -1,53 +1,4 @@
-var ImageViewer = (function() {
-    var self;
-
-    function ImageViewer(container) {
-        this.$container = $(container);
-        this.$container.find('.left-button').click(this.goLeft);
-        this.$container.find('.right-button').click(this.goRight);
-        this.$container.find('.close-button').click(this.close);
-        this.index = 0;
-        this.coll = [];
-        self = this;
-    }
-
-    ImageViewer.prototype.showCurrent = function() {
-        var _index = self.index % self.coll.length;
-        var curImageUrl = this.coll[_index];
-        this.$container.find('img').attr('src', curImageUrl);
-    }
-
-    ImageViewer.prototype.close = function() {
-        self.$container.removeClass('active');
-        self.index = 0;
-        self.coll = [];
-    }
-
-    ImageViewer.prototype.goLeft = function() {
-        self.index--;
-        self.showCurrent();
-    }
-
-    ImageViewer.prototype.goRight = function() {
-        self.index++;
-        self.showCurrent();
-    }
-    11
-
-    ImageViewer.prototype.show = function(_index, _coll) {
-        this.index = _index;
-        this.coll = _coll;
-        this.showCurrent();
-        this.$container.addClass('active');
-    }
-
-    return ImageViewer;
-})();
-
 $(document).ready(function(argument) {
-
-    var imageIndex = 0;
-    var imageCollection = [];
 
     function selectActive(activeElement) {
         activeElement.siblings().removeClass('active');
@@ -102,6 +53,36 @@ $(document).ready(function(argument) {
         });
     }
 
+    var slicker = null;
+
+    function showImageSlick(index, urls) {
+        if (slicker) {
+            slicker.slick('unslick');
+        }
+        slicker = $('#image-slick');
+
+
+        slicker.slick({
+            centerMode: true,
+            prevArrow: '<span class="prevArrow hidden-xs hidden-sm glyphicon glyphicon-chevron-left"></span>',
+            nextArrow: '<span class="nextArrow hidden-xs hidden-sm glyphicon glyphicon-chevron-right"></span>'
+        });
+        $('.slick-slide', slicker).remove();
+        $.each(urls, function(index, url) {
+            var positionStr = (index + 1).toString() + '/' + urls.length;
+            slicker.slick('slickAdd', '<div><img src="' + url + '"></img><div class="title">' + positionStr + '</div></div>');
+        });
+        slicker.slick('slickGoTo', index);
+        slicker.addClass('active');
+        slicker.on('click', function(event, arg2) {
+            var $target = $(event.target);
+            if ($target.hasClass('prevArrow') || $target.hasClass('nextArrow')) {
+                return;
+            }
+            slicker.removeClass('active');
+        });
+    }
+
     $('.modal-nav-toggle').click(function() {
         $('.modal-nav-wrap').addClass('active');
     });
@@ -112,9 +93,7 @@ $(document).ready(function(argument) {
     $('[data-media]').click(function(event) {
         var mediaUrl = $(event.target).data('media');
         showVideo(mediaUrl);
-    })
-
-    var imageViewer = new ImageViewer('#image-viewer');
+    });
 
     $('[data-image]').click(function(event) {
         var imgs = $(this).parents('.tab-pane').find('[data-image] img');
@@ -122,16 +101,12 @@ $(document).ready(function(argument) {
             return $(img).attr('src');
         });
         var curUrl = $(this).find('img').attr('src');
-        // var index = collection.index(this);
-        // showImageModal(index, collection);
         var index = urls.indexOf(curUrl);
-        imageViewer.show(index, urls);
-    })
+        showImageSlick(index, urls);
+    });
 
     $(window).on('hashchange', hashChanged);
     hashChanged();
     delayLoadImg(isLargeScreen());
     initSlicker();
-    initImageModal();
-
 });
