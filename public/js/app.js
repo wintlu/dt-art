@@ -6,10 +6,14 @@ $(document).ready(function(argument) {
     }
 
     function showVideo(mediaUrl) {
+        var $modal = $('#video-modal');
         if (mediaUrl) {
-            $('#video-modal').find('iframe').prop('src', mediaUrl);
+            $modal.find('iframe').prop('src', mediaUrl);
         }
-        $('#video-modal').modal({});
+        $modal.modal({});
+        $modal.on('hidden.bs.modal', function() {
+            $modal.find('iframe').prop('src', '');
+        });
     }
 
     function hashChanged() {
