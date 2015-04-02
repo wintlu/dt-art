@@ -48,8 +48,8 @@ $(document).ready(function(argument) {
     function initSlicker() {
         $('.slick-carousel').slick({
             auto: true,
-            prevArrow: '<span class="prevArrow hidden-xs hidden-sm glyphicon glyphicon-chevron-left"></span>',
-            nextArrow: '<span class="nextArrow hidden-xs hidden-sm glyphicon glyphicon-chevron-right"></span>'
+            prevArrow: '<span class="prevArrow hidden-xs hidden-sm icon-left-open-big"></span>',
+            nextArrow: '<span class="nextArrow hidden-xs hidden-sm icon-right-open-big"></span>'
         });
     }
 
@@ -64,8 +64,8 @@ $(document).ready(function(argument) {
 
         slicker.slick({
             centerMode: true,
-            prevArrow: '<span class="prevArrow hidden-xs hidden-sm glyphicon glyphicon-chevron-left"></span>',
-            nextArrow: '<span class="nextArrow hidden-xs hidden-sm glyphicon glyphicon-chevron-right"></span>'
+            prevArrow: '<span class="prevArrow hidden-xs hidden-sm icon-left-open-big"></span>',
+            nextArrow: '<span class="nextArrow hidden-xs hidden-sm icon-right-open-big"></span>'
         });
         $('.slick-slide', slicker).remove();
         $.each(urls, function(index, url) {
@@ -91,7 +91,7 @@ $(document).ready(function(argument) {
     });
 
     $('[data-media]').click(function(event) {
-        var mediaUrl = $(event.target).data('media');
+        var mediaUrl = $(this).data('media');
         showVideo(mediaUrl);
     });
 

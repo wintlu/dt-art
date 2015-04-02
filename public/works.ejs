@@ -25,124 +25,62 @@
             <div class="tab-content">
                 <div role="tabpanel" class="tab-pane" name="works-animation">
                     <div class="row">
-                        <div class="col-sm-3">
-                            <div class="tab-pane-item img-sm" data-media>
-                                <img src="img/ajax-loader.gif" data-delay-src="http://www.hisan.com.cn/uploads/allimg/110905/1-110Z51RU5354.jpg">
+                        <% var contents = works_animation;
+                         for(var i in contents){ %>
+                          <% var work = contents[i] %>
+                            <div class="col-sm-3">
+                            <div class="tab-pane-item img-sm" data-media="<%= work.video %>">
+                                <img src="img/ajax-loader.gif" data-delay-src="<%= work.image %>">
                                 <div class="backdrop"></div>
                                 <div class="img-title">
-                                    Item ###
+                                    <%- work.title %>
                                 </div>
                                 <div class="img-detail">
-                                    Something detail.Something detail.Something detail.
+                                    xxx
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-3">
-                            <div class="tab-pane-item img-sm" data-media>
-                                <img src="img/ajax-loader.gif" data-delay-src="http://www.hisan.com.cn/uploads/allimg/110905/1-110Z51RU5354.jpg">
-                                <div class="backdrop"></div>
-                                <div class="img-title">
-                                    Item ###
-                                </div>
-                                <div class="img-detail">
-                                    Something detail.Something detail.Something detail.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="tab-pane-item img-sm" data-media>
-                                <img src="img/ajax-loader.gif" data-delay-src="http://www.hisan.com.cn/uploads/allimg/110905/1-110Z51RU5354.jpg">
-                                <div class="backdrop"></div>
-                                <div class="img-title">
-                                    Item ###
-                                </div>
-                                <div class="img-detail">
-                                    Something detail.Something detail.Something detail.
-                                </div>
-                            </div>
-                            <div class="tab-pane-item img-sm" data-media>
-                                <img src="img/ajax-loader.gif" data-delay-src="http://www.hisan.com.cn/uploads/allimg/110905/1-110Z51RU5354.jpg">
-                                <div class="backdrop"></div>
-                                <div class="img-title">
-                                    Item ###
-                                </div>
-                                <div class="img-detail">
-                                    Something detail.Something detail.Something detail.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="tab-pane-item img-sm" data-media>
-                            </div>
-                        </div>
+                        <% } %>
                     </div>
                 </div>
                 <div role="tabpanel" class="tab-pane" name="works-media">
                     <div class="row">
-                        <div class="col-sm-6">
-                            <div class="tab-pane-item img-lg" data-media>
-                                <img src="img/ajax-loader.gif" data-delay-src="http://www.hisan.com.cn/uploads/allimg/110905/1-110Z51RU5354.jpg">
+                         <% var contents = works_media;
+                         for(var i in contents){ %>
+                          <% var work = contents[i] %>
+                            <div class="col-sm-3">
+                            <div class="tab-pane-item img-sm" data-media="<%= work.video %>">
+                                <img src="img/ajax-loader.gif" data-delay-src="<%= work.image %>">
                                 <div class="backdrop"></div>
                                 <div class="img-title">
-                                    Item ###
+                                    <%- work.title %>
                                 </div>
                                 <div class="img-detail">
-                                    Something detail.Something detail.Something detail.
+                                    xxx
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-3">
-                            <div class="tab-pane-item img-sm" data-media>
-                                <img src="img/ajax-loader.gif" data-delay-src="http://www.hisan.com.cn/uploads/allimg/110905/1-110Z51RU5354.jpg">
-                                <div class="backdrop"></div>
-                                <div class="img-title">
-                                    Item ###
-                                </div>
-                                <div class="img-detail">
-                                    Something detail.Something detail.Something detail.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="tab-pane-item img-sm" data-media>
-                                <img src="img/ajax-loader.gif" data-delay-src="http://www.hisan.com.cn/uploads/allimg/110905/1-110Z51RU5354.jpg">
-                                <div class="backdrop"></div>
-                                <div class="img-title">
-                                    Item ###
-                                </div>
-                                <div class="img-detail">
-                                    Something detail.Something detail.Something detail.
-                                </div>
-                            </div>
-                        </div>
+                        <% } %>
                     </div>
                 </div>
                 <div role="tabpanel" class="tab-pane" name="works-video">
                      <div class="row">
-                        <div class="col-sm-6">
-                            <div class="tab-pane-item img-lg" data-media>
-                                <img src="img/ajax-loader.gif" data-delay-src="http://www.hisan.com.cn/uploads/allimg/110905/1-110Z51RU5354.jpg">
+                      <% var contents = works_video;
+                         for(var i in contents){ %>
+                          <% var work = contents[i] %>
+                            <div class="col-sm-3">
+                            <div class="tab-pane-item img-sm" data-media="<%= work.video %>">
+                                <img src="img/ajax-loader.gif" data-delay-src="<%= work.image %>">
                                 <div class="backdrop"></div>
                                 <div class="img-title">
-                                    Item ###
+                                    <%- work.title %>
                                 </div>
                                 <div class="img-detail">
-                                    Something detail.Something detail.Something detail.
+                                    xxx
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-3">
-                            <div class="tab-pane-item img-sm" data-media>
-                                <img src="img/ajax-loader.gif" data-delay-src="http://www.hisan.com.cn/uploads/allimg/110905/1-110Z51RU5354.jpg">
-                                <div class="backdrop"></div>
-                                <div class="img-title">
-                                    Item ###
-                                </div>
-                                <div class="img-detail">
-                                    Something detail.Something detail.Something detail.
-                                </div>
-                            </div>
-                        </div>
+                        <% } %>
                     </div>
                 </div>
                 <div role="tabpanel" class="tab-pane" name="works-drawing">

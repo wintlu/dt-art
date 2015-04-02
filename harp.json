@@ -6,6 +6,49 @@
             "assets/works-drawing-2.jpg",
             "assets/works-drawing-3.jpg",
             "assets/works-drawing-4.jpg"
-        ]
+        ],
+        "works_media": [{
+            "title": "九合尚品",
+            "image": "http://dt-art.qiniudn.com/assets/works-media-1-九合尚品.jpg",
+            "video": "http://player.youku.com/embed/XOTIzMjkxNTA4"
+        }, {
+            "title": "西乡茶产业博览园",
+            "image": "http://dt-art.qiniudn.com/assets/works-media-2-西乡茶产业博览园.jpg",
+            "video": "http://player.youku.com/embed/XOTIzMjg2ODYw"
+        }],
+        "works_animation": [{
+            "title": "云投中心",
+            "image": "http://dt-art.qiniudn.com/assets/works-animation-1-云投中心.jpg",
+            "video": "http://player.youku.com/embed/XOTIzMTg2NTEy"
+        }, {
+            "title": "华和春城",
+            "image": "http://dt-art.qiniudn.com/assets/works-animation-2-华和春城.jpg",
+            "video": "http://player.youku.com/embed/XOTIzMTkzMDE2"
+        }, {
+            "title": "四季金辉",
+            "video": "",
+            "image": "http://dt-art.qiniudn.com/assets/works-animation-3-四季金辉.jpg"
+        }, {
+            "title": "天和大厦",
+            "image": "http://dt-art.qiniudn.com/assets/works-animation-4-天和大厦.jpg",
+            "video": "http://player.youku.com/embed/XOTIzMTg2Mzk2"
+        }, {
+            "title": "比亚迪",
+            "image": "http://dt-art.qiniudn.com/assets/works-animation-5-比亚迪.jpg",
+            "video": "http://player.youku.com/embed/XOTIzMjkyNTM2"
+        }],
+        "works_video": [{
+            "title": "地母庙",
+            "image": "http://dt-art.qiniudn.com/assets/works-video-1-地母庙.jpg"
+        }, {
+            "title": "印象长庆",
+            "image": "http://dt-art.qiniudn.com/assets/works-video-2-印象长庆.jpg"
+        }, {
+            "title": "橡园雾茶",
+            "image": "http://dt-art.qiniudn.com/assets/works-video-3-橡园雾茶.jpg"
+        }, {
+            "title": "启源宣传片",
+            "image": "http://dt-art.qiniudn.com/assets/works-video-4-启源宣传片.jpg"
+        }]
     }
 }
