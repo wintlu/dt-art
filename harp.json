@@ -3,28 +3,26 @@
         "cdn_url": "http://dt-art.qiniudn.com/assets/",
         "works_drawing": [{
             "title": "",
-            "url": "works-drawing-1.jpg",
-            "detail": ""
+            "url": "works-drawing-1.jpg"
         }, {
             "title": "",
-            "url": "works-drawing-2.jpg",
-            "detail": ""
+            "url": "works-drawing-2.jpg"
         }, {
             "title": "",
-            "url": "works-drawing-3.jpg",
-            "detail": ""
+            "url": "works-drawing-3.jpg"
         }, {
             "title": "",
-            "url": "works-drawing-4.jpg",
-            "detail": ""
+            "url": "works-drawing-4.jpg"
         }],
         "works_media": [{
             "title": "九合尚品",
-            "image": "http://dt-art.qiniudn.com/assets/works-media-1-九合尚品.jpg",
+            "image": "works-media-1-九合尚品.jpg",
+            "home_image": "home-media-1-九合尚品.jpg",
             "video": "http://player.youku.com/embed/XOTIzMjkxNTA4"
         }, {
             "title": "西乡茶产业博览园",
-            "image": "http://dt-art.qiniudn.com/assets/works-media-2-西乡茶产业博览园.jpg",
+            "image": "works-media-2-西乡茶产业博览园.jpg",
+            "home_image": "home-media-2-西乡茶产业博览园.jpg",
             "video": "http://player.youku.com/embed/XOTIzMjg2ODYw"
         }],
         "works_animation": [{
@@ -34,6 +32,7 @@
         }, {
             "title": "华和春城",
             "image": "works-animation-2-华和春城.jpg",
+            "home_image": "home-animation-3-华和春城.jpg",
             "video": "http://player.youku.com/embed/XOTIzMTkzMDE2"
         }, {
             "title": "四季金辉",
@@ -42,6 +41,7 @@
         }, {
             "title": "天和大厦",
             "image": "works-animation-4-天和大厦.jpg",
+            "home_image": "home-animation-2-天和大厦.jpg",
             "video": "http://player.youku.com/embed/XOTIzMTg2Mzk2"
         }, {
             "title": "比亚迪",
@@ -70,7 +70,8 @@
         }, {
             "title": "空港新城",
             "video": "http://player.youku.com/embed/XOTIzMTg2NTY0",
-            "image": "works-animation-11-空港新城.jpg"
+            "image": "works-animation-11-空港新城.jpg",
+            "home_image": "home-animation-1-空港产业城.jpg"
         }, {
             "title": "陕汽修井机",
             "video": "http://player.youku.com/embed/XOTIzMjc3MTcy",
@@ -78,16 +79,24 @@
         }],
         "works_video": [{
             "title": "地母庙",
-            "image": "http://dt-art.qiniudn.com/assets/works-video-1-地母庙.jpg"
+            "video": "http://player.youku.com/embed/XOTIzMjc0OTM2",
+            "image": "works-video-1-地母庙.jpg",
+            "home_image": "home-video-4-地母庙.jpg"
         }, {
             "title": "印象长庆",
-            "image": "http://dt-art.qiniudn.com/assets/works-video-2-印象长庆.jpg"
+            "video": "http://player.youku.com/embed/XOTIzMjc0OTMy",
+            "image": "works-video-2-印象长庆.jpg",
+            "home_image": "home-video-2-印象长庆.jpg"
         }, {
             "title": "橡园雾茶",
-            "image": "http://dt-art.qiniudn.com/assets/works-video-3-橡园雾茶.jpg"
+            "video": "http://player.youku.com/embed/XOTIzMjc0Nzky",
+            "image": "works-video-3-橡园雾茶.jpg",
+            "home_image": "home-video-1-橡园雾茶.jpg"
         }, {
             "title": "启源宣传片",
-            "image": "http://dt-art.qiniudn.com/assets/works-video-4-启源宣传片.jpg"
+            "video": "http://player.youku.com/embed/XOTIzMjc0OTA4",
+            "image": "works-video-4-启源宣传片.jpg",
+            "home_image": "home-video-3-启源宣传片.jpg"
         }]
     }
 }

@@ -42,12 +42,11 @@
                 </div>
                 <div role="tabpanel" class="tab-pane" name="works-media">
                     <div class="row">
-                         <% var contents = works_media;
-                         for(var i in contents){ %>
-                          <% var work = contents[i] %>
+                        <% for(var i in works_media){ %>
+                          <% var work = works_media[i] %>
                             <div class="col-sm-3">
                             <div class="tab-pane-item img-sm" data-media="<%= work.video %>">
-                                <img src="img/ajax-loader.gif" data-delay-src="<%= work.image %>">
+                                <img src="img/ajax-loader.gif" data-delay-src="<%= cdn_url + work.image %>">
                                 <div class="backdrop"></div>
                                 <div class="img-title">
                                     <%- work.title %>
@@ -59,12 +58,11 @@
                 </div>
                 <div role="tabpanel" class="tab-pane" name="works-video">
                      <div class="row">
-                      <% var contents = works_video;
-                         for(var i in contents){ %>
-                          <% var work = contents[i] %>
+                      <% for(var i in works_video){ %>
+                          <% var work = works_video[i] %>
                             <div class="col-sm-3">
                             <div class="tab-pane-item img-sm" data-media="<%= work.video %>">
-                                <img src="img/ajax-loader.gif" data-delay-src="<%= work.image %>">
+                                <img src="img/ajax-loader.gif" data-delay-src="<%= cdn_url + work.image %>">
                                 <div class="backdrop"></div>
                                 <div class="img-title">
                                     <%- work.title %>
