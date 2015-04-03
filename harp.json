@@ -1,21 +1,21 @@
 {
     "globals": {
-        "cdn_url": "http://dt-art.qiniudn.com/",
+        "cdn_url": "http://dt-art.qiniudn.com/assets/",
         "works_drawing": [{
             "title": "",
-            "url": "assets/works-drawing-1.jpg",
+            "url": "works-drawing-1.jpg",
             "detail": ""
         }, {
             "title": "",
-            "url": "assets/works-drawing-2.jpg",
+            "url": "works-drawing-2.jpg",
             "detail": ""
         }, {
             "title": "",
-            "url": "assets/works-drawing-3.jpg",
+            "url": "works-drawing-3.jpg",
             "detail": ""
         }, {
             "title": "",
-            "url": "assets/works-drawing-4.jpg",
+            "url": "works-drawing-4.jpg",
             "detail": ""
         }],
         "works_media": [{
@@ -29,24 +29,52 @@
         }],
         "works_animation": [{
             "title": "云投中心",
-            "image": "http://dt-art.qiniudn.com/assets/works-animation-1-云投中心.jpg",
+            "image": "works-animation-1-云投中心.jpg",
             "video": "http://player.youku.com/embed/XOTIzMTg2NTEy"
         }, {
             "title": "华和春城",
-            "image": "http://dt-art.qiniudn.com/assets/works-animation-2-华和春城.jpg",
+            "image": "works-animation-2-华和春城.jpg",
             "video": "http://player.youku.com/embed/XOTIzMTkzMDE2"
         }, {
             "title": "四季金辉",
             "video": "",
-            "image": "http://dt-art.qiniudn.com/assets/works-animation-3-四季金辉.jpg"
+            "image": "works-animation-3-四季金辉.jpg"
         }, {
             "title": "天和大厦",
-            "image": "http://dt-art.qiniudn.com/assets/works-animation-4-天和大厦.jpg",
+            "image": "works-animation-4-天和大厦.jpg",
             "video": "http://player.youku.com/embed/XOTIzMTg2Mzk2"
         }, {
             "title": "比亚迪",
-            "image": "http://dt-art.qiniudn.com/assets/works-animation-5-比亚迪.jpg",
+            "image": "works-animation-5-比亚迪.jpg",
             "video": "http://player.youku.com/embed/XOTIzMjkyNTM2"
+        }, {
+            "title": "Mr'O私享家",
+            "video": "http://player.youku.com/embed/XNzczMzM4NTg0",
+            "image": "works-animation-6-MR'O私享家.jpg"
+        }, {
+            "title": "华县隆发城市广场",
+            "video": "http://player.youku.com/embed/XOTIzMTg2NDA0",
+            "image": "works-animation-7-华县隆发城市广场.jpg"
+        }, {
+            "title": "太平金融大厦",
+            "video": "http://player.youku.com/embed/XOTIzMjkyNDky",
+            "image": "works-animation-8-太平金融大厦.jpg"
+        }, {
+            "title": "机械厂房",
+            "video": "http://player.youku.com/embed/XOTIzMjc3Mjky",
+            "image": "works-animation-9-机械厂房.jpg"
+        }, {
+            "title": "泾渭国际城",
+            "video": "http://player.youku.com/embed/XOTIzMTg2NDU2",
+            "image": "works-animation-10-泾渭国际城.png"
+        }, {
+            "title": "空港新城",
+            "video": "http://player.youku.com/embed/XOTIzMTg2NTY0",
+            "image": "works-animation-11-空港新城.jpg"
+        }, {
+            "title": "陕汽修井机",
+            "video": "http://player.youku.com/embed/XOTIzMjc3MTcy",
+            "image": "works-animation-12-陕汽修井机.jpg"
         }],
         "works_video": [{
             "title": "地母庙",
