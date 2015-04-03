@@ -5,9 +5,14 @@ $(document).ready(function(argument) {
         activeElement.addClass('active');
     }
 
-    function showVideo(mediaUrl) {
+    function showVideo(mediaUrl, title) {
+        if (mediaUrl === 'undefined') {
+            return;
+        }
+
         var $modal = $('#video-modal');
         if (mediaUrl) {
+            $modal.find('.model-title').text(title);
             $modal.find('iframe').prop('src', mediaUrl);
         }
         $modal.modal({});
@@ -64,10 +69,7 @@ $(document).ready(function(argument) {
             slicker.slick('unslick');
         }
         slicker = $('#image-slick');
-
-
         slicker.slick({
-            centerMode: true,
             prevArrow: '<span class="prevArrow hidden-xs hidden-sm icon-left-open-big"></span>',
             nextArrow: '<span class="nextArrow hidden-xs hidden-sm icon-right-open-big"></span>'
         });
@@ -96,7 +98,8 @@ $(document).ready(function(argument) {
 
     $('[data-media]').click(function(event) {
         var mediaUrl = $(this).data('media');
-        showVideo(mediaUrl);
+        var title = $(this).find('.img-title').text();
+        showVideo(mediaUrl, title);
     });
 
     $('[data-image]').click(function(event) {

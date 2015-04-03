@@ -329,6 +329,12 @@ footer
   background-color: $bk-color
   padding-top: 20px
   
+.modal-backdrop.in
+  opacity: 0.8
+.modal-content
+  background-color: #000
+  h4, .close
+    color: #fff
 //content page
 .banner
     height: 150px
@@ -349,12 +355,13 @@ footer
     border: 1px solid #eee
     padding-top: 10px
     padding-bottom: 10px
+    min-height: 105px
   .project-process-description
+    min-height: 105px
     border: 1px solid #eee
     p
-      margin-top: 0
-      margin-bottom: 0
-      
+      margin-top: 0.5em
+      margin-bottom: 0.5em
       span
         display: inline-block
         font-weight: bold

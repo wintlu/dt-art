@@ -89,14 +89,14 @@
                          for(var i in contents){ %>
                           <% var image = contents[i] %>
                             <div class="col-sm-3">
-                            <div class="tab-pane-item img-sm" data-image>
-                                <img src="img/ajax-loader.gif" data-delay-src="<%= cdn_url + image %>">
+                            <div class="tab-pane-item img-sm" data-image >
+                                <img src="img/ajax-loader.gif" data-delay-src="<%= cdn_url + image.url %>">
                                 <div class="backdrop"></div>
                                 <div class="img-title">
-                                    Item ###
+                                    <%- image.title %>
                                 </div>
                                 <div class="img-detail">
-                                    Something detail.Something detail.Something detail.
+                                    <%- image.detail %>
                                 </div>
                             </div>
                         </div>
@@ -105,30 +105,6 @@
                 </div>
                 <div role="tabpanel" class="tab-pane" name="works-others">
                      <div class="row">
-                        <div class="col-sm-3">
-                            <div class="tab-pane-item img-sm" data-image>
-                                <img src="img/ajax-loader.gif" data-delay-src="img/china-map.png">
-                                <div class="backdrop"></div>
-                                <div class="img-title">
-                                    Item ###
-                                </div>
-                                <div class="img-detail">
-                                    Something detail.Something detail.Something detail.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="tab-pane-item img-sm" data-image>
-                                <img src="img/ajax-loader.gif" data-delay-src="img/slider-arrow.png">
-                                <div class="backdrop"></div>
-                                <div class="img-title">
-                                    Item ###
-                                </div>
-                                <div class="img-detail">
-                                    Something detail.Something detail.Something detail.
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
