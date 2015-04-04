@@ -60,6 +60,13 @@
                                 <%=works_animation[10].title %>
                             </div>
                         </div>
+                        <div class="tab-pane-item img-sm" data-media="<%= works_animation[4].video %>">
+                            <img src="img/ajax-loader.gif" data-delay-src="<%= cdn_url + works_animation[4].home_image %>">
+                            <div class="backdrop"></div>
+                            <div class="img-title">
+                                <%=works_animation[4].title %>
+                            </div>
+                        </div>
                     </div>
                     <div class="col-sm-6">
                         <div class="tab-pane-item img-sm" data-media="<%= works_animation[3].video %>">
@@ -69,13 +76,24 @@
                                 <%=works_animation[3].title %>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-3">
-                        <div class="tab-pane-item img-sm" data-media="<%= works_animation[1].video %>">
-                            <img src="img/ajax-loader.gif" data-delay-src="<%= cdn_url + works_animation[1].home_image %>">
-                            <div class="backdrop"></div>
-                            <div class="img-title">
-                                <%=works_animation[1].title %>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="tab-pane-item img-sm" data-media="<%= works_animation[1].video %>">
+                                    <img src="img/ajax-loader.gif" data-delay-src="<%= cdn_url + works_animation[1].home_image %>">
+                                    <div class="backdrop"></div>
+                                    <div class="img-title">
+                                        <%=works_animation[1].title %>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-6">
+                                <div class="tab-pane-item img-lg" data-media="<%= works_animation[0].video %>">
+                                    <img src="img/ajax-loader.gif" data-delay-src="<%= cdn_url + works_animation[0].home_image %>">
+                                    <div class="backdrop"></div>
+                                    <div class="img-title">
+                                        <%=works_animation[0].title %>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -165,7 +183,7 @@
                             </div>
                         </div>
                     </div>
-                     <div class="col-sm-3">
+                    <div class="col-sm-3">
                         <div class="tab-pane-item img-sm" data-image>
                             <img src="img/ajax-loader.gif" data-delay-src="<%= cdn_url + works_drawing[2].image %>">
                             <div class="backdrop"></div>

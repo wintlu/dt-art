@@ -27,6 +27,7 @@
         }],
         "works_animation": [{
             "title": "云投中心",
+            "home_image": "home-animation-4-云投中心.jpg",
             "image": "works-animation-1-云投中心.jpg",
             "video": "http://player.youku.com/embed/XOTIzMTg2NTEy"
         }, {
@@ -45,6 +46,7 @@
             "video": "http://player.youku.com/embed/XOTIzMTg2Mzk2"
         }, {
             "title": "比亚迪",
+            "home_image": "home-animation-5-比亚迪.jpg",
             "image": "works-animation-5-比亚迪.jpg",
             "video": "http://player.youku.com/embed/XOTIzMjkyNTM2"
         }, {
