@@ -74,18 +74,13 @@
                 </div>
                 <div role="tabpanel" class="tab-pane" name="works-drawing">
                     <div class="row">
-                        <% var contents = works_drawing;
-                         for(var i in contents){ %>
-                          <% var image = contents[i] %>
+                        <% for(var i in works_drawing){ %>
                             <div class="col-sm-3">
                             <div class="tab-pane-item img-sm" data-image >
-                                <img src="img/ajax-loader.gif" data-delay-src="<%= cdn_url + image.url %>">
+                                <img src="img/ajax-loader.gif" data-delay-src="<%= cdn_url + works_drawing[i].image %>">
                                 <div class="backdrop"></div>
                                 <div class="img-title">
-                                    <%- image.title %>
-                                </div>
-                                <div class="img-detail">
-                                    <%- image.detail %>
+                                    <%- works_drawing[i].title %>
                                 </div>
                             </div>
                         </div>
@@ -93,8 +88,7 @@
                     </div>
                 </div>
                 <div role="tabpanel" class="tab-pane" name="works-others">
-                     <div class="row">
-                    </div>
+                    <h4 class="text-center text-muted">暂无作品</h4>
                 </div>
             </div>
         </div>

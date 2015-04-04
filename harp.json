@@ -3,16 +3,16 @@
         "cdn_url": "http://dt-art.qiniudn.com/assets/",
         "works_drawing": [{
             "title": "",
-            "url": "works-drawing-1.jpg"
+            "image": "works-drawing-1.jpg"
         }, {
             "title": "",
-            "url": "works-drawing-2.jpg"
+            "image": "works-drawing-2.jpg"
         }, {
             "title": "",
-            "url": "works-drawing-3.jpg"
+            "image": "works-drawing-3.jpg"
         }, {
             "title": "",
-            "url": "works-drawing-4.jpg"
+            "image": "works-drawing-4.jpg"
         }],
         "works_media": [{
             "title": "九合尚品",
