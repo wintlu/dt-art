@@ -368,3 +368,21 @@ footer
         text-align: right
   .glyphicon-menu-down
     font-size: 25px
+//about 
+.partner
+  background-image: url('http://dt-art.qiniudn.com/assets/partners-v2.jpg')
+  height: 192px
+  width: 192px
+  float: left
+  display: inline-block
+  transition: transform 0.2s, box-shadow 0.3s
+  &:hover
+    transform: scale(1.1)
+    box-shadow: 0px 0px 5px #000;
+  //width = 960/5 = 192, height = 1536/8 = 192
+
+for i in (0..4)
+  for j in (0..7)
+    .partner-{i}-{j}
+      background-position-x: 192px * i
+      background-position-y: 192px * j
