@@ -377,10 +377,16 @@ footer
   display: inline-block
   transition: transform 0.2s, box-shadow 0.3s
   &:hover
-    transform: scale(1.1)
+    transform: scale(1.05)
     box-shadow: 0px 0px 5px #000;
-  //width = 960/5 = 192, height = 1536/8 = 192
-
+  &.home
+    background-image: url('http://dt-art.qiniudn.com/assets/partners-home.jpg')
+    width: 20%
+    height: 185px
+    border-right: 1px solid #eee
+    border-bottom: 1px solid #eee
+    
+//width = 960/5 = 192, height = 1536/8 = 192
 for i in (0..4)
   for j in (0..7)
     .partner-{i}-{j}
