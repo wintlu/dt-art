@@ -188,35 +188,31 @@ body
 
 .img-lg
   height: 360px
-  line-height: 360px
 .img-sm
   height: 165px
-  line-height: 165px
 .img-lg, .img-sm
   background-color: #000
   overflow: hidden
   margin-bottom: 30px
-  text-align: center
   position: relative
   color: #fff
   > img
-    max-width: 100%
+    &.contain
+      max-width: 100%
     height: auto
     transition: all 0.3s
   .img-title
     font-size: 25px
+    top: 0px
   .img-detail
-    font-size: 15px
+    font-size: 13px
+    bottom: 0px
   .img-title, .img-detail
-    text-align: center
     position: absolute
-    left: 0
-    top: 0
-    height: 100%
-    width: 100%
+    left: 15px
     z-index: 2
     opacity: 0
-    transition: margin-top 0.3s, opacity 0.3s
+    transition: all 0.3s
     @extend .hidden-ie7
     @extend .hidden-ie8
   .backdrop
@@ -225,7 +221,7 @@ body
     top: 0
     height: 100%
     width: 100%
-    background: #000
+    background: darken($brand-color,20%)
     opacity: 0
     z-index: 1
     transition: opacity 0.3s
@@ -235,10 +231,13 @@ body
     img
       transform: scale(1.1)
     .backdrop
-      opacity: 0.5
+      opacity: 0.8
     .img-title
-      margin-top: -10px
       opacity: 1
+      top: 15px
+    .img-detail
+      opacity: 1
+      bottom: 15px
   &.active .tab-pane-item
     @extend .animated
     @extend .puffIn
@@ -392,3 +391,7 @@ for i in (0..4)
     .partner-{i}-{j}
       background-position-x: 192px * i
       background-position-y: 192px * j
+
+[name="about-culture"]
+  h5
+    color: $brand-color
