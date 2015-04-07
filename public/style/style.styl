@@ -368,22 +368,30 @@ footer
   .glyphicon-menu-down
     font-size: 25px
 //about 
-.partner
-  background-image: url('http://dt-art.qiniudn.com/assets/partners-v2.jpg')
-  height: 192px
-  width: 192px
+.partner-wrapper
+  overflow: hidden
   float: left
   display: inline-block
+  text-align: center
+  width: 50%
+  height: 180px
   transition: transform 0.2s, box-shadow 0.3s
+  @media (min-width: 768px)
+    width: 25%
+    @media (min-width: 992px)
+      width: 20%
   &:hover
     transform: scale(1.05)
-    box-shadow: 0px 0px 5px #000;
-  &.home
-    background-image: url('http://dt-art.qiniudn.com/assets/partners-home.jpg')
-    width: 20%
-    height: 185px
-    border-right: 1px solid #eee
-    border-bottom: 1px solid #eee
+    box-shadow: 0px 0px 2px #000;
+  .partner
+    background-image: url('http://dt-art.qiniudn.com/assets/partners-v2.jpg')
+    height: 192px
+    width: 192px
+    display: inline-block
+    &.home
+      background-image: url('http://dt-art.qiniudn.com/assets/partners-home.jpg')
+      border-right: 1px solid #eee
+      border-bottom: 1px solid #eee
     
 //width = 960/5 = 192, height = 1536/8 = 192
 for i in (0..4)
@@ -395,3 +403,5 @@ for i in (0..4)
 [name="about-culture"]
   h5
     color: $brand-color
+    
+

@@ -69,7 +69,9 @@
                 <div role="tabpanel" class="tab-pane" name="about-partners">
                     <% for(var i in [0, 1,2,3,4])
                         { for(var j in [0, 1,2,3,4,5,6,7]){ %>
-                            <div class="partner partner-<%=i%>-<%=j%>">
+                            <div class="partner-wrapper">
+                                <div class="partner partner-<%=i%>-<%=j%>">
+                                </div>
                             </div>
                     <% } }%>
                 </div>
