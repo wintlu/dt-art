@@ -188,14 +188,17 @@ body
 
 .img-lg
   height: 360px
+  line-height: 360px
 .img-sm
   height: 165px
+  line-height: 165px
 .img-lg, .img-sm
   background-color: #000
   overflow: hidden
   margin-bottom: 30px
   position: relative
   color: #fff
+  text-align: center
   > img
     &.contain
       max-width: 100%
@@ -203,13 +206,16 @@ body
     transition: all 0.3s
   .img-title
     font-size: 25px
+    line-height: 30px
     top: 0px
   .img-detail
     font-size: 13px
+    line-height: 13px
     bottom: 0px
     text-transform: uppercase
   .img-title, .img-detail
     position: absolute
+    text-align: left
     left: 15px
     z-index: 2
     opacity: 0
