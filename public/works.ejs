@@ -77,7 +77,9 @@
                         <% for(var i in works_drawing){ %>
                             <div class="col-sm-3">
                             <div class="tab-pane-item img-sm" data-image >
-                                <img class="contain" src="img/ajax-loader.gif" data-delay-src="<%= cdn_url + works_drawing[i].image %>">
+                                <img src="img/ajax-loader.gif" data-delay-src="<%= cdn_url + works_drawing[i].image %>" 
+                                    data-crop-lg="imageView2/1/w/205/h/165"
+                                    data-crop-sm="imageView2/1/w/205/h/165">
                                 <div class="backdrop"></div>
                                 <div class="img-title">
                                     <%- works_drawing[i].title %>

@@ -1,8 +1,16 @@
 $(document).ready(function(argument) {
+    var _isLargeScreen = isLargeScreen();
 
     function selectActive(activeElement) {
         activeElement.siblings().removeClass('active');
         activeElement.addClass('active');
+    }
+
+    function selectActiveTab(activeElement) {
+        selectActive(activeElement);
+        $('img[data-delay-src]', activeElement).each(function(index, img) {
+            loadImg($(img));
+        })
     }
 
     function showVideo(mediaUrl, title) {
@@ -27,24 +35,28 @@ $(document).ready(function(argument) {
             var anchor = $('.menu-nav-2 a[href="#' + hashID + '"]');
             selectActive(anchor.parent());
             var content = $('[name=' + hashID + ']');
-            selectActive(content);
+            selectActiveTab(content);
         } else {
             var activeAnchor = $('.menu-nav-2 li.active a');
             window.location.hash = activeAnchor.attr('href');
         }
     }
 
-    function delayLoadImg(isLargeScreen) {
-        $('img[data-delay-src]').each(function(index, img) {
-            var $img = $(img);
-            var realSrc = $img.attr('data-delay-src')
-            if (!isLargeScreen) {
-                var cropParam = $img.attr('data-crop');
-                realSrc = realSrc + '?' + cropParam;
-            }
-            $img.attr('src', realSrc);
+    function loadImg($img) {
+        var realSrc = $img.attr('data-delay-src');
+        if (_isLargeScreen && $img.attr('data-crop-lg')) {
+            realSrc += '?' + $img.attr('data-crop-lg');
+        } else if (!_isLargeScreen && $img.attr('data-crop-sm')) {
+            realSrc += '?' + $img.attr('data-crop-sm');
+        }
+        $img.attr('src', realSrc);
+    }
+
+    function loadImages() {
+        $('img[data-delay-src].eager').each(function(index, img) {
+            loadImg($(img));
         });
-    };
+    }
 
     function isLargeScreen() {
         var $html = $('html');
@@ -105,15 +117,15 @@ $(document).ready(function(argument) {
     $('[data-image]').click(function(event) {
         var imgs = $(this).parents('.tab-pane').find('[data-image] img');
         var urls = $.map(imgs, function(img) {
-            return $(img).attr('src');
+            return $(img).attr('data-delay-src');
         });
-        var curUrl = $(this).find('img').attr('src');
+        var curUrl = $(this).find('img').attr('data-delay-src');
         var index = urls.indexOf(curUrl);
         showImageSlick(index, urls);
     });
 
     $(window).on('hashchange', hashChanged);
     hashChanged();
-    delayLoadImg(isLargeScreen());
+    loadImages();
     initSlicker();
 });
