@@ -16,6 +16,14 @@ body
   > [class^="col-"], > [class*=" col-"]
     padding-left: 0
     padding-right: 0
+.panel-body.shift-padding
+  padding: 0
+  .tab-pane
+    padding: 15px
+    &.no-padding
+      padding: 0
+    .has-padding
+      padding: 15px
 
 .hidden-ie7
   html.ie7 &
