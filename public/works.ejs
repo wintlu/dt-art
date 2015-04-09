@@ -90,7 +90,20 @@
                     </div>
                 </div>
                 <div role="tabpanel" class="tab-pane" name="works-others">
-                    <h4 class="text-center text-muted">暂无作品</h4>
+                    <div class="row">
+                        <% for(var i = 0; i< 20; i++){ %>
+                            <div class="col-sm-3">
+                            <div class="tab-pane-item img-sm" data-image >
+                                <img src="img/ajax-loader.gif" data-delay-src="<%= cdn_others_url + 'game-'+i+'.jpg' %>" 
+                                    data-crop-lg="imageView2/1/w/205/h/165"
+                                    data-crop-sm="imageView2/1/w/205/h/165">
+                                <div class="backdrop"></div>
+                                <div class="img-title">
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
+                    </div>
                 </div>
             </div>
         </div>

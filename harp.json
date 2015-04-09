@@ -1,6 +1,7 @@
 {
     "globals": {
         "cdn_url": "http://dt-art.qiniudn.com/assets/",
+        "cdn_others_url": "http://dt-art.qiniudn.com/others/",
         "works_drawing": [{
             "title": "",
             "image": "works-drawing-1.jpg"
