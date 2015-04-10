@@ -6,6 +6,10 @@
 body
   font-family: Helvetica, Tahoma, Arial, "Microsoft YaHei", "微软雅黑", STXihei, "华文细黑", SimSun, "宋体", Heiti, "黑体", sans-serif;
 
+opacity(n)
+  opacity n
+  filter unquote('progid:DXImageTransform.Microsoft.Alpha(Opacity=' + round(n * 100) + ')')
+
 @media (min-width: 1200px)
   .container
     max-width: 970px
@@ -224,7 +228,7 @@ body
     text-align: left
     left: 15px
     z-index: 2
-    opacity: 0
+    opacity 0
     transition: all 0.3s
     @extend .hidden-ie7
     @extend .hidden-ie8
@@ -234,8 +238,8 @@ body
     top: 0
     height: 100%
     width: 100%
-    background: darken($brand-color,20%)
-    opacity: 0
+    background: #222
+    opacity 0
     z-index: 1
     transition: opacity 0.3s
     @extend .hidden-ie7
@@ -244,13 +248,14 @@ body
     img
       transform: scale(1.1)
     .backdrop
-      opacity: 0.8
+      opacity 0.7
     .img-title
-      opacity: 1
+      opacity 1
       top: 15px
     .img-detail
-      opacity: 1
+      opacity 1
       bottom: 15px
+
   &.active .tab-pane-item
     @extend .animated
     @extend .puffIn
@@ -263,6 +268,29 @@ body
 
 [data-media],[data-image]
   cursor: pointer
+//   &:after
+//     font-family: 'Glyphicons Halflings'
+//     font-style: normal
+//     font-weight: normal
+//     -webkit-font-smoothing: antialiased
+//     -moz-osx-font-smoothing: grayscale
+//     z-index:2
+//     position: absolute
+//     font-size: 30px
+//     top: 0
+//     margin-left: -15px
+//     opacity: 0
+//     transition: all 0.3s
+// [data-media]
+//   &:hover
+//     &:after
+//       opacity 1
+//       content: "\e059"
+// [data-image]
+//   &:hover
+//     &:after
+//       opacity 1
+//       content: "\e060"
  
 #image-slick
   position: fixed
