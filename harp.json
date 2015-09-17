@@ -51,10 +51,36 @@
             "video": "http://player.youku.com/embed/XOTIzMjg2ODYw"
         }],
         "works_animation": [{
-            "title": "云投中心",
-            "home_image": "home-animation-4-云投中心.jpg",
-            "image": "works-animation-1-云投中心.jpg",
-            "video": "http://player.youku.com/embed/XOTIzMTg2NTEy"
+            "title": "迅通物流",
+            "image": "works-animation-迅通物流.jpg",
+            "home_image": "works-animation-home-迅通物流.jpg",
+            "video": "http://player.youku.com/embed/XMTMzNTU4NjE2NA"
+        }, {
+            "title": "淘宝生态城",
+            "image": "works-animation-淘宝生态城.jpg",
+            "video": "http://player.youku.com/embed/XMTMzNTU5NzQxNg"
+        }, {
+            "title": "动画场景展示",
+            "image": "works-animation-动画场景展示.jpg",
+            "video": "http://player.youku.com/embed/XMTMzNjUxMzk0OA"
+        }, {
+            "title": "动画广告",
+            "image": "works-animation-动画广告.jpg",
+            "home_image": "works-animation-home-广告动画.jpg",
+            "video": "http://player.youku.com/embed/XMTMzNjUxNzYzMg"
+        }, {
+            "title": "牡丹",
+            "image": "works-animation-牡丹.jpg",
+            "home_image": "works-animation-home-牡丹.jpg",
+            "video": "http://player.youku.com/embed/XMTMzNjUyMTk3Ng"
+        }, {
+            "title": "牡丹demo",
+            "image": "works-animation-牡丹demo.jpg",
+            "video": "http://player.youku.com/embed/XMTMzNzA1OTc3Mg"
+        }, {
+            "title": "提莫的一天",
+            "image": "works-animation-提莫的一天.jpg",
+            "video": "http://player.youku.com/embed/XMTMzNjUyNDcwMA"
         }, {
             "title": "华和春城",
             "image": "works-animation-2-华和春城.jpg",
@@ -67,7 +93,7 @@
         }, {
             "title": "天和大厦",
             "image": "works-animation-4-天和大厦.jpg",
-            "home_image": "home-animation-2-天和大厦.jpg",
+            "home_image": "works-animation-home-天和大厦.jpg",
             "video": "http://player.youku.com/embed/XOTIzMTg2Mzk2"
         }, {
             "title": "比亚迪",
