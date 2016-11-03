@@ -1,0 +1,18 @@
+{
+  "name": "dt-art",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sync": "qiniu/qrsync qiniu/conf.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wintlu/dt-art.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wintlu/dt-art/issues"
+  }
+}
